@@ -1,0 +1,27 @@
+ATmega328P
+
+registers: 32
+register names: r0-r31
+register width: 1byte (8bits)
+word size: 2bytes (16bits)
+
+
+
+Flash ==> 32KBytes => 0x1000  \
+EEPROM => 1KBytes  => 0x0400  |-> 16bits to reach addrs 0x0000 -> 0xFFFF
+SRAM ===> 2KBytes  => 0x0800  /
+
+Write/Erase Cycles:
+10,000 ===> Flash
+100,000 ==> EEPROM
+lifetime => registers & SRAM
+
+8 bit addr:
+  0xFF   => 0.25KBytes
+16 bit addr:
+  0xFFFF => 64KBytes
+
+Interrupt Vector Size: 2 instruction words/vector
+
+Chip       Core  Missing Instructions
+ATmega328P AVRe+ ELPM, EIJMP, EICALL

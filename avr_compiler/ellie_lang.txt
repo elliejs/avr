@@ -1,0 +1,32 @@
+[] and type
+<> or type
+: function type
+() application
+{} code block
+= assignment
+! dereference
+& reference
+
+type int_or_float = <int, float> #anonymous union#
+int_or_float[0] #int part#
+
+type int_or_float = <int i, float f> #named union#
+
+
+(int argc, !!char argv):int main = {
+  [int, int] jeff = {0, 1};
+  [int x, y] geoff = {.x = 0, .y = 0};
+
+  geoff.x = 0;
+  jeff[0] = 2;
+
+  (int a, b):int bob = {
+    return a + b;
+  };
+
+  bob(1, 2);
+
+  (int a):int boob = {return bob(a, 2);};
+
+  return SUCCESS;
+};

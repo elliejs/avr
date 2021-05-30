@@ -1,0 +1,14 @@
+type table
+names -> type structures
+
+function table
+symbol -> scope table entry
+
+scope table
+assignment = literal -> value
+pushes value onto stack and replaces occurrences on RHS with stack reference in execution flow
+
+or
+
+function(assigned values)
+pushes pointers to the stack where arguments belong and calls function
